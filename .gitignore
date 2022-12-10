@@ -102,3 +102,7 @@ dist
 
 # TernJS port file
 .tern-port
+
+/back-end/entorno
+
+back-end/api/db.sqlite3
