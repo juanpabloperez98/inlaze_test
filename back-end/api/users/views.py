@@ -8,11 +8,10 @@ from rest_framework import status
 from rest_framework.authtoken.models import Token
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from rest_framework.permissions import IsAuthenticated
+
 
 from .models import User
-
-# Create your views here.
-
 
 class RegisterUser(APIView):
 
@@ -113,7 +112,7 @@ class Login(APIView):
             username=request.data.get("email"),
             password=request.data.get("password"),
         )
-
+        
         if user is None:
             return Response(
                 data={
@@ -145,5 +144,10 @@ class Login(APIView):
             }, status=status.HTTP_400_BAD_REQUEST)
 
 
+class LogOut(APIView):
 
+    def post(self, request):
+        Token.delete(request.auth)
+        return Response(status=status.HTTP_200_OK)
+    
 
