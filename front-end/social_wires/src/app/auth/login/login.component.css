@@ -1,0 +1,26 @@
+h1{
+    font-size: 60px;
+    color: white;
+    margin: auto;
+    position: absolute; 
+    top: 90%;
+    left: 50px;
+    background-color: rgb(53, 61, 70);
+    width: 90%;
+    text-align: center;
+}
+
+h4{
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.create{
+    background-color: rgb(53, 61, 70);
+    color: white;
+}
+.create:hover{
+    background-color: rgb(70, 79, 88);
+    color: wheat;
+}
