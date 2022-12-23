@@ -1,2 +1,12 @@
 <app-header></app-header>
-<app-card></app-card>
+<div class="container">
+    <div class="messages_container">
+        <div *ngFor="let publish of publishes" class="card w-50 mt-4 mx-auto">
+            <div class="card-body">
+                <h5 class="card-title">{{ publish.title }}</h5>
+                <p class="card-text">{{ publish.comment }}</p>
+                <footer class="blockquote-footer"><cite title="Source Title">{{ publish.user_nickname }} - {{ publish.created_at }}</cite></footer>
+            </div>
+        </div>
+    </div>
+</div>

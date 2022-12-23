@@ -3,9 +3,13 @@ from published.models import Published
 
 
 class PublishedSerializer(serializers.ModelSerializer):
+
+    user_nickname = serializers.CharField(source="user.nickname")
+
     class Meta:
         model = Published
         fields = (
+            "user_nickname",
             "title",
             "comment",
             "created_at",
