@@ -1,5 +1,6 @@
 <div class="banner">
     <h1>Welcome to wires</h1>
+    <img src="../../../assets/icons/logo.svg" id="logo" alt="logo">
     <img src="../../../assets/image/banner.png" alt="banner">
 </div>
 <div class="mt-5 form">
@@ -9,20 +10,20 @@
                 <h4 class="text-center">LOGIN</h4>
             </div>
         </div>
-        <form class="form-horizontal form-material mb-5">
+        <form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()" class="form-horizontal form-material mb-5">
             <div class="form-group">
               <label class="col-md-12">Email Address</label> 
-              <input type="email" class="form-control" id="email" placeholder="Email">
+              <input type="email" class="form-control" formControlName="email" id="email" placeholder="Email">
             </div>
             <div class="form-group">
               <label class="col-md-12">Password</label> 
-              <input type="password" class="form-control" id="password" placeholder="Password">
+              <input type="password" class="form-control" formControlName="password" id="password" placeholder="Password">
             </div>
             <div class="form-group mt-4">
                 <a href="/auth/signup">¿Aun no tienes cuenta?</a>
               </div>
             <div class="form-group mt-2 text-center">
-                <a class="btn create w-50">Sign In</a>
+                <button type="submit" class="btn create w-50">Log In</button>
             </div>
         </form>
     </div>

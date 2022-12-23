@@ -4,9 +4,9 @@ h1{
     margin: auto;
     position: absolute; 
     top: 90%;
-    left: 50px;
-    background-color: rgb(53, 61, 70);
-    width: 90%;
+    left: 0px;
+    background-color: rgb(70, 79, 87);
+    width: 100%;
     text-align: center;
 }
 
@@ -23,4 +23,15 @@ h4{
 .create:hover{
     background-color: rgb(70, 79, 88);
     color: wheat;
+}
+
+#logo{
+    width: 600px;
+    position: absolute;
+    left: 20%;
+    top: 40%;
+}
+
+a{
+    color: rgb(233, 234, 101);    
 }

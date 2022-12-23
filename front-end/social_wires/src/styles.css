@@ -1,9 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 html, body{
     height: 100%;
-    background: #6D6027;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #D3CBB8, #6D6027);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #D3CBB8, #6D6027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-color: rgb(175, 175, 175);
 
 }
 
@@ -22,10 +20,19 @@ html, body{
 
 .form{
     width: 50%;
-    background: #6D6027;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #D3CBB8, #6D6027);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #D3CBB8, #6D6027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-color: rgb(175, 175, 175);
     margin: auto;
     padding: 30px;
     border-radius: 20px;
+}
+
+label{
+    color: rgb(233, 234, 101);
+}
+
+.messages_container{
+    background-color: rgb(217, 217, 217);
+    padding: 20px;
+    margin-top: 70px;
+    
 }

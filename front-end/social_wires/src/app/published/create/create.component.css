@@ -1,0 +1,16 @@
+form{
+    margin-top: 100px;
+    background-color: rgb(53, 61, 70);
+    padding: 30px;
+    border-radius: 10px;
+}
+h3{
+    color: rgb(233, 234, 101);
+}
+.btn-custom{
+    background-color: rgb(217, 217, 217);
+    color: black;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 10px;
+}

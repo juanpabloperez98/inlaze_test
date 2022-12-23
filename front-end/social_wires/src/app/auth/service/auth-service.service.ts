@@ -17,9 +17,27 @@ export class AuthServiceService {
     private httpClient: HttpClient
   ) { }
 
-  signUpService( endPoint: string, body:  Record<string, string | number | any> ):any {
+  postService( endPoint: string, body:  Record<string, string | number | any> ):any {
     const url = `${this.url}/${endPoint}`;
     return this.httpClient.post(url, body, {headers:this.securityHeaders});
+  }
+
+  setToken(token: string){
+    localStorage.setItem(btoa(environment.btoa_security),token);
+  }
+
+  getToken(){
+    return localStorage.getItem(btoa(environment.btoa_security));
+  }
+
+  logOut(endPoint:string) {
+    let securityHeaders = new HttpHeaders({
+      'Content-Type': 'application/json; charset=utf-8',
+      'Authorization': `token ${this.getToken()}` 
+    });
+    const url = `${this.url}/${endPoint}`;
+    localStorage.removeItem(btoa(environment.btoa_security));
+    return this.httpClient.post(url, {}, {headers: securityHeaders});
   }
 
 }

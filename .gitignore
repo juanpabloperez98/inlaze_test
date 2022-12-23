@@ -1,1 +1,6 @@
 /templatemo_517_timeless
+run/
+.DS_Store
+.env
+.nvmrc
+/docs_

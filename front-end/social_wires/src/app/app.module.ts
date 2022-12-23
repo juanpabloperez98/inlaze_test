@@ -8,12 +8,20 @@ import { AppComponent } from './app.component';
 import { Approutes } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrModule } from 'ngx-toastr';
+import { AuthModule } from './auth/auth.module';
+import { PublishedModule } from './published/published.module';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
+    // My modules
+    AuthModule,
+    PublishedModule,
+    // Angular Modules
     ToastrModule.forRoot(),
     HttpClientModule,
     BrowserModule,

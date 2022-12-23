@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, ValidationErrors } from '@angular/forms';
 import { AuthServiceService } from '../service/auth-service.service';
-import { HttpParams } from '@angular/common/http';
 import { ToastrService } from "ngx-toastr";
 
-import { Router } from '@angular/router';
 
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -38,6 +37,7 @@ export class SignUpComponent implements OnInit {
   }
 
   onSubmit(): void {
+    
     if (this.registerForm.valid) {
 
       const body = {
@@ -50,7 +50,7 @@ export class SignUpComponent implements OnInit {
 
 
       this.process = 'Registrando...';
-      this.authService.signUpService(`register_user`, body)
+      this.authService.postService(`register_user`, body)
         .subscribe((res: string) => {
           this.router.navigate(['auth/login']);
           this.toastr.success('Usuario registrado con exito', 'Proceso exitoso');
